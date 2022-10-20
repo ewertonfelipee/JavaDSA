@@ -32,4 +32,26 @@ public class Stack {
         return refInputStack;
 
     }
+
+    @Override
+    public String toString(){
+        String returnString = "--------------\n";
+        returnString += "   Stack\n";
+        returnString += "--------------\n";
+
+        Node auxNode = refInputStack;
+
+        while(true){
+            if(auxNode != null){
+                returnString += "[Node{data: " + auxNode.getData() + "}]\n";
+                auxNode = auxNode.getRefNode();
+            }
+            else{
+                break;
+            }
+        }
+
+        returnString += "==============\n";
+        return returnString;
+    }
 }
