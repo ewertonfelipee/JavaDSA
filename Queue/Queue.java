@@ -25,6 +25,7 @@ public class Queue {
                     break;
                 }
             }
+            return firstNode;
         }
         return null;
     }
@@ -53,5 +54,26 @@ public class Queue {
             return true;
         }
         return false;
+    }
+
+    @Override
+
+    public String toString(){
+        String stringReturn = "";
+        Node auxNode = refInputQueue;
+
+        if(refInputQueue != null){
+            while(true){
+                stringReturn += "[Node{object=" + auxNode.getItem() + "}] --> ";
+                if(auxNode.getRefNode() != null){
+                    auxNode = auxNode.getRefNode();
+                }else{ 
+                    stringReturn += "null"; 
+                    break;
+                }
+            }
+        }else{ stringReturn = "null";}
+
+        return stringReturn;
     }
 }

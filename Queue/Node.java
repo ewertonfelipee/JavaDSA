@@ -7,9 +7,8 @@ public class Node {
 
     public Node() {}
     
-    public Node(Object item, Node refNode) {
+    public Node(Object item) {
         this.item = item;
-        this.refNode = refNode;
     }
 
     public Object getItem(){
@@ -30,7 +29,7 @@ public class Node {
 
     @Override
     public String toString(){
-        return "Node{" + "item =" + item + "}";
+        return "Node{" + "item=" + item + "}";
     }
 
 }
